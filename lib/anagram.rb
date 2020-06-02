@@ -5,9 +5,9 @@ class Anagram
     end
 
     def match(anagrams)
-        sorted = @word.downcase.chars.sort.join
+        sorted = @word.downcase.chars.sort
         anagrams.select do |match|
-            match.downcase.chars.sort.join == sorted
+            match.downcase.chars.sort == sorted
         end
     end
     
